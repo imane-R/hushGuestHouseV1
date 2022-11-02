@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 253px;
+  margin-left: 23px;
+}
+nav {
+  margin-top: 35px;
+}
+a {
+  text-decoration: none;
+}
+.nav-link {
+  color: #613101;
+  font-size: 23px;
+  margin: 25px;
+}
+.banner {
+  width: -webkit-fill-available;
+  height: 308px;
+  object-fit: cover;
+  filter: brightness(30%);
+  position: relative;
+}
+.text {
+  position: absolute;
+  top: 32%;
+  left: 26%;
+  font-size: 40px;
+  color: #ffff;
+}
