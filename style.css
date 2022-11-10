@@ -1,16 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+body {
+  font-family: "Playfair Display", serif;
+}
 header {
   display: flex;
   justify-content: space-between;
+  background-color: #faebd7;
+  height: 73px;
+  z-index: 9;
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
 }
 .logo {
-  width: 253px;
   margin-left: 23px;
+  margin-top: 10px;
 }
 nav {
-  margin-top: 35px;
+  margin-top: 19px;
 }
 a {
   text-decoration: none;
+}
+a:hover {
+  border-bottom: solid 2px #613101;
 }
 .nav-link {
   color: #613101;
@@ -18,16 +41,103 @@ a {
   margin: 25px;
 }
 .banner {
-  width: -webkit-fill-available;
-  height: 308px;
-  object-fit: cover;
-  filter: brightness(30%);
-  position: relative;
+  width: 100%;
+  padding-top: 13%;
+  padding-bottom: 13%;
+  animation: fading 18s infinite;
 }
-.text {
-  position: absolute;
-  top: 32%;
-  left: 26%;
+
+ul {
   font-size: 40px;
   color: #ffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: black;
+  opacity: 67%;
+}
+li {
+  list-style: none;
+}
+.about {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+h1 {
+  background-color: #faebd7;
+  padding: 10px;
+  text-align: center;
+}
+.rooms {
+  background-color: #faebd7;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  max-width: min-content;
+  margin-right: 2px;
+}
+.images {
+  display: flex;
+  justify-content: space-between;
+}
+.bigImg {
+  width: 515px;
+  height: 378px;
+  object-fit: cover;
+  border: solid 6px black;
+}
+.smallImg {
+  width: 90px;
+  border: solid 5px #faebd7;
+}
+.smallImges {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes fading {
+  0% {
+    background: url("images/outside.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  50% {
+    background: url("images/garden.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  100% {
+    background: url("images/livingRoom.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .images {
+    flex-direction: column;
+  }
+  .smallImges {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .bigImg {
+    width: 348px;
+    height: 254px;
+  }
+  .smallImg {
+    width: 65px;
+    border: solid 1px black;
+  }
 }
