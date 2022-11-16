@@ -5,18 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Hush guset house</title>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="logo" class="logo">
-        <nav>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Gallery</a>
-            <a class="nav-link" href="#">Contact</a>
-        </nav>
+        <div id="disktop">
+            <img src="images/logo.png" alt="logo" class="logo">
+            <nav>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Top Navigation Menu burger -->
+        <div class="topnav">
+            <img src="images/logo.png" alt="logo" class="logo active">
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <a id="icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <div class="banner">
         <ul>
@@ -120,9 +136,8 @@
                 </p>
                 <p class="prix"> From <strong>R618.75</strong> pps</p>
             </div>
-
-
         </div>
+        <button class="bookingButton"> Book Now </button>
     </div>
 
 

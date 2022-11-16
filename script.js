@@ -6,19 +6,21 @@ const smallImgs1 = document.querySelectorAll(".room1");
 const smallImgs2 = document.querySelectorAll(".room2");
 const smallImgs3 = document.querySelectorAll(".room3");
 const smallImgs4 = document.querySelectorAll(".room4");
+const iconNavMenu = document.querySelector("#icon");
+const links = document.querySelector("#myLinks");
 
 window.onscroll = function () {
   scrollwithFixedHeader();
 };
 
-let header = document.querySelector("header");
-let sticky = header.offsetTop;
+let disktop = document.querySelector("#disktop");
+let sticky = disktop.offsetTop;
 
 function scrollwithFixedHeader() {
   if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+    disktop.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    disktop.classList.remove("sticky");
   }
 }
 
@@ -34,3 +36,14 @@ changeImg(smallImgs1, selectedImgRoom1);
 changeImg(smallImgs2, selectedImgRoom2);
 changeImg(smallImgs3, selectedImgRoom3);
 changeImg(smallImgs4, selectedImgRoom4);
+
+function openCloseNavMenu() {
+  iconNavMenu.addEventListener("click", () => {
+    if (links.style.display === "block") {
+      links.style.display = "none";
+    } else {
+      links.style.display = "block";
+    }
+  });
+}
+openCloseNavMenu();
