@@ -127,6 +127,11 @@ h1 {
   height: 40px;
   width: 24%;
   margin-top: 30px;
+  border-radius: 12px;
+  background-color: #613101;
+  color: #ffff;
+  text-align: center;
+  padding: 11px 52px 0px 52px;
 }
 
 @keyframes fading {
@@ -168,7 +173,7 @@ h1 {
   }
 
   #myLinks {
-    display: block;
+    display: none;
   }
 
   .topnav a {
@@ -176,7 +181,7 @@ h1 {
     background: #613101;
     padding: 19px 20px;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 20px;
     display: block;
   }
 
@@ -210,5 +215,12 @@ h1 {
     width: 65px;
     border: solid 1px black;
     margin-top: 5px;
+  }
+  ul {
+    font-size: 20px;
+    padding-left: 0;
+  }
+  .about {
+    width: 83%;
   }
 }
