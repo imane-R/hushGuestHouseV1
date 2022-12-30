@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 header {
   height: 73px;
@@ -82,9 +84,10 @@ h1 {
   padding: 10px;
   text-align: center;
 }
-.rooms {
+#rooms {
   background-color: #faebd7;
   padding-bottom: 30px;
+  position: relative;
 }
 .cards {
   display: flex;
@@ -113,13 +116,18 @@ h1 {
   border-top-right-radius: 15px;
 }
 .smallImg {
-  width: 19%;
+  width: 24%;
 }
 .smallImges {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+strong {
+  font-weight: bold;
+  font-size: 25px;
+  color: #ea2323;
 }
 .bookingButton {
   margin: auto;
@@ -132,6 +140,38 @@ h1 {
   color: #ffff;
   text-align: center;
   padding: 11px 52px 0px 52px;
+}
+#lightBox {
+  display: none;
+  width: 100%;
+  background-color: rgb(210, 210, 210);
+  position: absolute;
+  height: 100%;
+}
+
+#lightBoxImg {
+  width: 85%;
+  object-fit: cover;
+}
+#close {
+  width: 37px;
+  padding-left: 95%;
+  padding-top: 3%;
+}
+
+.chevronFlex {
+  display: flex;
+  justify-content: space-between;
+}
+#chevron-left {
+  font-size: 30px;
+  padding-left: 24px;
+  padding-top: 30%;
+}
+#chevron-right {
+  font-size: 30px;
+  padding-right: 24px;
+  padding-top: 30%;
 }
 
 @keyframes fading {
@@ -170,6 +210,7 @@ h1 {
     display: block;
     overflow: hidden;
     position: relative;
+    z-index: 1;
   }
 
   #myLinks {
@@ -179,7 +220,7 @@ h1 {
   .topnav a {
     color: white;
     background: #613101;
-    padding: 19px 20px;
+    padding: 28px 26px;
     text-decoration: none;
     font-size: 20px;
     display: block;
@@ -202,8 +243,12 @@ h1 {
   .active {
     color: white;
   }
+  .banner {
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
   .card {
-    min-width: 322px;
+    min-width: 94%;
   }
   .smallImges {
     flex-wrap: wrap;
@@ -212,7 +257,6 @@ h1 {
     height: 254px;
   }
   .smallImg {
-    width: 65px;
     border: solid 1px black;
     margin-top: 5px;
   }
@@ -222,5 +266,26 @@ h1 {
   }
   .about {
     width: 83%;
+  }
+  #lightBox {
+    margin: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 0;
+  }
+  #close {
+    width: 37px;
+    padding-left: 90%;
+    padding-top: 3%;
+  }
+  #chevron-left {
+    font-size: 20px;
+    padding-left: 9px;
+    padding-top: 30%;
+  }
+  #chevron-right {
+    font-size: 20px;
+    padding-right: 9px;
+    padding-top: 30%;
   }
 }

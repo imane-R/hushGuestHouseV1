@@ -8,6 +8,14 @@ const smallImgs3 = document.querySelectorAll(".room3");
 const smallImgs4 = document.querySelectorAll(".room4");
 const iconNavMenu = document.querySelector("#icon");
 const links = document.querySelector("#myLinks");
+const lightBoxImgs = document.querySelectorAll(".bigImg");
+const lightBox = document.querySelector("#lightBox");
+const closeBox = document.querySelector("#close");
+const lightBoxImgContainer = document.querySelector("#lightBoxImgContainer");
+const lightBoxImg = document.querySelector("#lightBoxImg");
+const container = document.querySelector("#container");
+const chevronLeft = document.querySelector("#chevron-left");
+const chevronRight = document.querySelector("#chevron-right");
 
 window.onscroll = function () {
   scrollwithFixedHeader();
@@ -37,6 +45,8 @@ changeImg(smallImgs2, selectedImgRoom2);
 changeImg(smallImgs3, selectedImgRoom3);
 changeImg(smallImgs4, selectedImgRoom4);
 
+/// burger Menu--------------------------------------------------------------
+
 function openCloseNavMenu() {
   iconNavMenu.addEventListener("click", () => {
     if (links.style.display === "block") {
@@ -47,3 +57,65 @@ function openCloseNavMenu() {
   });
 }
 openCloseNavMenu();
+
+/// lightBox --------------------------------------------------------------
+
+function openLightBox() {
+  lightBoxImgs.forEach((element) => {
+    element.addEventListener("click", () => {
+      container.style.display = "none";
+      lightBox.style.display = "block";
+      lightBoxImg.setAttribute("src", element.getAttribute("src"));
+    });
+  });
+}
+openLightBox();
+
+function nextImage() {
+  chevronLeft.addEventListener("click", () => {
+    let image = lightBoxImg.getAttribute("src");
+    firstPath = image.split("/")[0];
+    secondPath = image.split("/")[1];
+    thirdPath = image.split("/")[2];
+    imgNum = thirdPath.split(".")[0];
+
+    if (imgNum == "4") {
+      lightBoxImg.setAttribute("src", `${firstPath}/${secondPath}/1.jpg`);
+    } else {
+      lightBoxImg.setAttribute(
+        "src",
+        `${firstPath}/${secondPath}/${parseInt(imgNum) + 1}.jpg`
+      );
+    }
+  });
+}
+nextImage();
+
+function previousImage() {
+  chevronRight.addEventListener("click", () => {
+    let image = lightBoxImg.getAttribute("src");
+    firstPath = image.split("/")[0];
+    secondPath = image.split("/")[1];
+    thirdPath = image.split("/")[2];
+    imgNum = thirdPath.split(".")[0];
+
+    if (imgNum == "1") {
+      lightBoxImg.setAttribute("src", `${firstPath}/${secondPath}/4.jpg`);
+    } else {
+      lightBoxImg.setAttribute(
+        "src",
+        `${firstPath}/${secondPath}/${parseInt(imgNum) - 1}.jpg`
+      );
+    }
+  });
+}
+previousImage();
+
+/// closeBox --------------------------------------------------------------
+function closeLightBox() {
+  closeBox.addEventListener("click", () => {
+    lightBox.style.display = "none";
+    container.style.display = "block";
+  });
+}
+closeLightBox();
