@@ -146,7 +146,6 @@ strong {
   width: 100%;
   background-color: rgb(210, 210, 210);
   position: absolute;
-  height: 100%;
 }
 
 #lightBoxImg {
@@ -172,6 +171,17 @@ strong {
   font-size: 30px;
   padding-right: 24px;
   padding-top: 30%;
+}
+.footer {
+  background-color: #613101;
+}
+.whiteLogo {
+  width: 20%;
+  display: block;
+  padding: 1%;
+  margin: auto;
+  padding-left: 5%;
+  padding-top: 5%;
 }
 
 @keyframes fading {
@@ -271,7 +281,6 @@ strong {
     margin: 0;
     top: 30%;
     transform: translateY(-50%);
-    height: 0;
   }
   #close {
     width: 37px;
@@ -287,5 +296,8 @@ strong {
     font-size: 20px;
     padding-right: 9px;
     padding-top: 30%;
+  }
+  #lightBoxImg {
+    padding-bottom: 50px;
   }
 }
