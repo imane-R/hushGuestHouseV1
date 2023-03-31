@@ -174,16 +174,17 @@ strong {
 }
 .footer {
   background-color: #613101;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
 }
 .whiteLogo {
   width: 20%;
   display: block;
-  padding: 1%;
-  margin: auto;
-  padding-left: 5%;
-  padding-top: 5%;
 }
-
+.footerText {
+  color: white;
+}
 @keyframes fading {
   0% {
     background: url("images/outside.jpeg");
